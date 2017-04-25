@@ -1,0 +1,10 @@
+[server]
+address = ""
+password = ""
+cipher_type = ""
+
+
+[[proxy_targets]]
+listen = ""
+target = ""
+host = ""

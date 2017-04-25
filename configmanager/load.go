@@ -1,5 +1,6 @@
 package configmanager
 
+//load config.toml
 import (
 	"os"
 	"io/ioutil"
@@ -29,7 +30,7 @@ func MustLoad() *Config {
 	if localConfigPath := "./config.toml"; Exists(localConfigPath) {
 		configPath = localConfigPath
 	} else {
-		configPath = os.Getenv("HOME") + "/.localproxy/config.toml"
+		configPath = os.Getenv("HOME") + "/.MonkeyProxy/config.toml"
 	}
 
 	configData, err := ioutil.ReadFile(configPath)
