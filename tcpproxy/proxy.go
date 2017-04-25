@@ -19,7 +19,7 @@ func NewClient(address, target string, dialer Dialer) *Client { // new a client
 	return &Client{Address: address, Target: target, Dialer: dialer}
 }
 
-func (client *Client) run() {
+func (client *Client) Run() {
 	server, err := net.Listen("tcp", client.Address)
 	if err != nil {
 		panic(err) //execution stop immediately
